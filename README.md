@@ -24,3 +24,5 @@ Vue.js doesn't pass functions down as props, they use events to fire up to the p
 - In addition, when an event goes back up to the root Vue instance you have to say @click.native
 
 Different ways to run Vuejs. Either with a CDN or downloaded library directly or through templating
+
+Vuejs can't track direct mutation of arrays or objects, so you need to splice a brand new one for it to rerender

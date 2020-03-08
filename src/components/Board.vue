@@ -21,6 +21,7 @@
 
 <script>
 import Square from './Square';
+import {calculateWinner} from '../utilities/helperFunctions';
 
 export default {
   name: "Board",
@@ -29,13 +30,33 @@ export default {
   },
   data: function() {
     return {
-      status: "Next player: X",
-      squares: Array(9).fill(null)
+      squares: Array(9).fill(null),
+      xIsNext: true,
     };
+  },
+  computed: {
+    status: function() {
+      const winner = calculateWinner(this.squares);
+      let status;
+      if (winner) {
+        status = 'Winner: ' + winner;
+      } else {
+        status = 'Next player: ' + (this.xIsNext ? 'X' : 'O');
+      }
+      return status;
+    }
   },
   methods: {
     handleClick(i) {
-      this.squares[i] = "X";
+      const newSquares = this.squares.slice(); // Need to slice data here instead of modifying index of array directly, otherwise reactivity system can't update
+      if (calculateWinner(newSquares) || newSquares[i]) {
+        return;
+      }
+      newSquares[i] = this.xIsNext ? 'X' : 'O';
+
+      // Reset state
+      this.squares = newSquares;
+      this.xIsNext = !this.xIsNext;
     }
   }
 }
