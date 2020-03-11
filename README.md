@@ -24,21 +24,7 @@ Youtube Tutorial Video URL:
     - Child to Parent Communication
     - Lists
 
-## References of Resources Used in Video
+## Resources
 - Vue.js vs React comparison https://vuejs.org/v2/guide/comparison.html
 - Vue.js Documentation: https://vuejs.org/v2/guide/
 - Vue.js API Reference: https://vuejs.org/v2/api/
-
-## Notes
-Vue prefers Templates vs Render functions in Virtual DOM
-
-Can access render functions directly though
-
-Vue.js doesn't pass functions down as props, they use events to fire up to the parent instead
-- In addition, when an event goes back up to the root Vue instance you have to say @click.native
-
-Different ways to run Vuejs. Either with a CDN or downloaded library directly or through templating
-
-Vuejs can't track direct mutation of arrays or objects, so you need to splice a brand new one for it to rerender
-
-Style tags can be scoped `<style scoped>` which makes them scoped to the component
