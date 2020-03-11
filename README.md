@@ -13,9 +13,12 @@ Youtube Tutorial Video URL:
 
 ## References of Resources Used in Video
 Vue.js Lifecycle Diagram: https://vuejs.org/v2/guide/instance.html#Lifecycle-Diagram
+
 Vue.js API Reference: https://vuejs.org/v2/api/
+
 Vue.js Why Vue doesn't pass functions to children components: https://michaelnthiessen.com/pass-function-as-prop/
 
+## Notes
 Vue prefers Templates vs Render functions in Virtual DOM
 
 Can access render functions directly though
