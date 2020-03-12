@@ -3,7 +3,7 @@
 ## About
 This is a project for my Web Dev class at BYU. I have created a video introducing some of the basics of Vuejs. Since my class is focusing on React development, I have recreated the tic-tac-toe app from the React tutorial in Vue to effectively compare the basics of React to Vuejs. Below is the URL to the YouTube video. 
 
-Youtube Tutorial Video URL:
+Youtube Tutorial Video URL: https://youtu.be/soEKD2JrQGM
 
 ## Agenda of Video
 1. Compare Vue.js with React
