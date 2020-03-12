@@ -1,5 +1,5 @@
 <template>
-    <div class="game">
+  <div class="game">
     <div class="game-board">
         <Board
             :squares="current.squares"
@@ -10,15 +10,13 @@
         <div>{{ status }}</div>
         <ol>
           <li v-for="(step, move) of history" :key="move">
-            <button 
-              @click="jumpTo(move)"
-            >
+            <button @click="jumpTo(move)">
               {{ move ? 'Go to move #' + move : 'Go to game start'}}
             </button>
           </li>
         </ol>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
